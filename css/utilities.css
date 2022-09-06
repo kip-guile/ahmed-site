@@ -152,6 +152,12 @@
   height: 100%;
 }
 
+.tel {
+  font-size: 0.9rem;
+  color: #fff;
+  margin-right: 0.5rem;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

@@ -20,7 +20,10 @@
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="features.html">Services</a></li>
+                    <li><a href="features.html">About us</a></li>
+                    <li><a target="_blank"
+                            href="https://res.cloudinary.com/pureretail/image/upload/v1662451552/private/ahmed-resume_vuxly7.pdf">Resume</a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -33,7 +36,7 @@
                 <h1>Easy and efficient Marine Services</h1>
                 <p>From onshore and offshore logistics, to wreck removal and underwater services, Aboda Emperor Services
                     provides cost effective solutions tailored to their requirements.</p>
-                <a href="features.html" class="btn btn-outline">Learn More</a>
+                <!-- <a href="features.html" class="btn btn-outline">Learn More</a> -->
             </div>
 
             <div class="showcase-form card">
@@ -54,15 +57,15 @@
                     </div>
                     <input type="submit" value="Send" class="btn btn-primary">
                 </form> -->
-                <form>
+                <form onsubmit="sendMail(); reset(); return false;">
                     <div class="form-control">
-                        <input type="text" name="name" placeholder="Name" required>
+                        <input type="email" name="email" placeholder="Email" required>
                     </div>
                     <div class="form-control">
                         <input type="text" name="company" placeholder="Company Name" required>
                     </div>
                     <div class="form-control">
-                        <input type="email" name="email" placeholder="Email" required>
+                        <input type="text" name="message" placeholder="Message" required>
                     </div>
                     <input type="submit" value="Send" class="btn btn-primary">
                 </form>
@@ -84,37 +87,37 @@
             <div class="grid grid-3 text-center my-4">
                 <div>
                     <img src="images/wreck-removal.jpg" alt="">
-                    <p class="text-secondary">Marine Wreck Removal and Underwater Services</p>
+                    <p class="text-secondary">Marine Wreck Removal and Underwater Logistics</p>
                 </div>
                 <div>
                     <img src="images/oil-tanker.jpg" alt="">
-                    <p class="text-secondary">Oil Tanker vessel Sales and Chartering Services</p>
+                    <p class="text-secondary">On-shore & off-shore logistics</p>
                 </div>
                 <div>
                     <img src="images/procurement.jpg" alt="">
-                    <p class="text-secondary">Equipment Procurement and Supply Services.</p>
-                </div>
-            </div>
-            <!-- <div class="grid grid-3 text-center my-4">
-                <div>
-                    <img src="images/price-mgt.jpg" alt="">
-                    <p class="text-secondary">Hedging and price management solutions</p>
-                </div>
-                <div>
-                    <img src="images/refinery.jpg" alt="">
-                    <p class="text-secondary">Refinery processing and downstream activities</p>
-                </div>
-                <div>
-                    <img src="images/inventory.jpg" alt="">
-                    <p class="text-secondary">Inventory Management</p>
+                    <p class="text-secondary">Oil tanker vessel sales & chattering</p>
                 </div>
             </div>
             <div class="grid grid-3 text-center my-4">
                 <div>
-                    <img src="images/storage.jpg" alt="">
-                    <p class="text-secondary">Storage and Storage Facilities</p>
+                    <img src="images/price-mgt.jpg" alt="">
+                    <p class="text-secondary">Oil equipments procurement and supplies</p>
+                </div>
+                <!-- <div>
+                    <img src="images/refinery.jpg" alt="">
+                    <p class="text-secondary">Refinery processing and downstream activities</p>
+                </div> -->
+                <div>
+                    <img src="images/inventory.jpg" alt="">
+                    <p class="text-secondary">Training and consultancy</p>
                 </div>
                 <div>
+                    <img src="images/storage.jpg" alt="">
+                    <p class="text-secondary">Ship / Vessel registration services</p>
+                </div>
+            </div>
+            <div class="grid grid-3 text-center my-4">
+                <!-- <div>
                     <img src="images/shipping.jpg" alt="">
                     <p class="text-secondary">Shipping</p>
                 </div>
@@ -122,7 +125,7 @@
                     <img src="images/risk.jpg" alt="">
                     <p class="text-secondary">Price Risk Management</p>
                 </div> -->
-        </div>
+            </div>
         </div>
     </section>
 
@@ -132,7 +135,7 @@
             <div class="text-center">
                 <h2 class="lg">Reliable Marine Services</h2>
                 <p class="lead my-1">Marine services like you've never experienced. Safe, sustainable and efficient</p>
-                <a href="features.html" class="btn btn-outline">Read More</a>
+                <a href="features.html" class="btn btn-outline">About us</a>
             </div>
             <i class="fas fa-ship fa-10x text-center"></i>
             <!-- <img src="images/cloud.png" alt=""> -->
@@ -179,29 +182,49 @@
     <footer class="footer bg-dark py-5">
         <div class="container grid grid-3">
             <div>
-                <h1>Aboda Emperor Services
+                <h1>Aboda Emperor Services Nigeria Limited
                 </h1>
                 <p>Copyright &copy; 2021</p>
             </div>
             <nav>
-                <ul>
+                <!-- <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="features.html">Services</a></li>
-                    <li><a href="docs.html">Docs</a></li>
-                </ul>
+                    <li><a href="features.html">About us</a></li>
+                </ul> -->
             </nav>
             <div class="social">
                 <h3>Contact us</h3>
                 <p>No 3 Dar-Es-Salam Street, Wuse 2, Abuja, FCT, Nigeria.</p>
-                <p>+2348069555150</p>
+                <p>No 1 Faith street, Comfort Oboh, Apapa, Lagos.</p>
+                <p>No 91, Fort Street, Freetown, Sierra Leone.</p>
+                <div class="flex">
+                    <p class="tel">+2348069555150</p>
+                    <p class="tel">+231770424848</p>
+                    <p class="tel">+23277630181</p>
+                </div>
                 <p>abodaemperorservices@gmail.com</p>
-                <a href="#"><i class="fab fa-github fa-2x"></i></a>
-                <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                <!-- <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
                 <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
-                <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="#"><i class="fab fa-twitter fa-2x"></i></a> -->
             </div>
         </div>
     </footer>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendMail() {
+            Email.send({
+                Host: "smtp.gmail.com",
+                Username: "abodaemperorservices@gmail.com",
+                Password: "password",
+                To: 'abodaemperorservices@gmail.com',
+                From: document.getElementById("email").email,
+                Subject: document.getElementById("subject").company,
+                Body: document.getElementById("message").message,
+            }).then(
+                message => alert(message)
+            );
+        }
+    </script>
 </body>
 
 </html>
