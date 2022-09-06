@@ -217,9 +217,9 @@
                 Username: "abodaemperorservices@gmail.com",
                 Password: "password",
                 To: 'abodaemperorservices@gmail.com',
-                From: document.getElementById("email").email,
-                Subject: document.getElementById("subject").company,
-                Body: document.getElementById("message").message,
+                From: document.getElementById("email").value,
+                Subject: document.getElementById("company").value,
+                Body: document.getElementById("message").value,
             }).then(
                 message => alert(message)
             );
