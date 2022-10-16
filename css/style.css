@@ -87,18 +87,29 @@ pre {
   width: 115px;
 }
 
+.png_txt {
+  font-style: italic;
+  font-size: 10px;
+}
+
 .logo{
   display: flex;
   flex-direction: column;
   position: relative;
   right: 100px;
 }
+
+.logo_img {
+  display: flex;
+  flex-direction: column;
+}
+
 .navbar {
   background-image: 
   linear-gradient(to bottom, rgba(30, 52, 173, 0.52), rgba(30, 52, 173, 0.52)),
   url("/images/bg.jpg");
   color: #fff;
-  height: 100px;
+  height: 150px;
   padding-top: 25px;
 }
 
