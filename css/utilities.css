@@ -266,3 +266,17 @@
 .p-5 {
   padding: 4rem;
 }
+
+.card-contact {
+  background-color: #fff;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 10px;
+  min-height: 183px;
+}
+
+.tel {
+  font-size: 20px;
+}
