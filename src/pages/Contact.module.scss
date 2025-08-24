@@ -1,0 +1,131 @@
+@use '../styles/variables' as *;
+@use 'sass:color';
+
+.contact {
+  background: url('/images/contact-bg.jpg') center/cover no-repeat;
+  padding: $spacing-xl $spacing-md;
+  color: $color-white;
+  text-align: center;
+
+  .overlay {
+    background: rgba(0, 0, 0, 0.65);
+    max-width: 700px;
+    margin: 0 auto;
+    padding: $spacing-xl $spacing-lg;
+    border-radius: 10px;
+  }
+
+  h2 {
+    color: $color-gold;
+    margin-bottom: $spacing-lg;
+    font-size: $font-size-xl;
+  }
+
+  .details {
+    display: flex;
+    justify-content: center;
+    gap: $spacing-lg;
+    margin-bottom: $spacing-xl;
+    flex-wrap: wrap;
+
+    div {
+      display: flex;
+      align-items: center;
+      gap: $spacing-sm;
+      font-size: 1rem;
+      background: rgba(255, 255, 255, 0.1);
+      padding: $spacing-sm $spacing-md;
+      border-radius: 6px;
+    }
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+    text-align: left;
+
+    label {
+      display: flex;
+      flex-direction: column;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    input,
+    textarea {
+      margin-top: $spacing-xs;
+      padding: 0.75rem 1rem;
+      border-radius: 6px;
+      border: 1px solid $color-grey;
+      font-size: 1rem;
+      color: $color-dark;
+      outline: none;
+
+      &:focus {
+        border-color: $color-gold;
+        box-shadow: 0 0 0 2px rgba(200, 169, 81, 0.4);
+      }
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    button {
+      align-self: center;
+      background: $color-gold;
+      color: white;
+      border: none;
+      padding: 0.85rem 2rem;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+
+      &:hover {
+        background: color.adjust($color-gold, $lightness: -10%);
+        transform: translateY(-2px);
+      }
+
+      &:hover:not(:disabled) {
+        background: color.adjust($color-gold, $lightness: -10%);
+        transform: translateY(-2px);
+      }
+
+      &:disabled {
+        background: rgba($color-gold, 0.6);
+        cursor: not-allowed;
+        transform: none;
+      }
+    }
+  }
+
+  /* Feedback messages */
+  .success {
+    margin-top: $spacing-md;
+    color: #4caf50;
+    font-weight: 600;
+  }
+
+  .error {
+    margin-top: $spacing-md;
+    color: #ff5252;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    .overlay {
+      padding: $spacing-lg $spacing-md;
+    }
+
+    .details {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}

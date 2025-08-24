@@ -1,0 +1,40 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: $font-main;
+  background: $color-light;
+  color: $color-dark;
+  line-height: 1.6;
+}
+
+/* Links */
+a {
+  color: $color-gold;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Headings */
+h1,
+h2,
+h3 {
+  font-family: $font-heading;
+  margin-bottom: $spacing-md;
+}
+
+/* Sections */
+section {
+  @include section;
+}

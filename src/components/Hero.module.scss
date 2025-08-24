@@ -1,0 +1,131 @@
+@use '../styles/variables' as *;
+@use 'sass:color';
+
+.hero {
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  transition: background-image 0.3s ease-in-out; // faster + subtle
+
+  .overlay {
+    background: rgba(0, 0, 0, 0.5);
+    padding: $spacing-lg;
+    border-radius: 8px;
+    max-width: 800px;
+    z-index: 2;
+  }
+
+  h1 {
+    font-size: $font-size-xxl;
+    margin-bottom: $spacing-md;
+  }
+
+  p {
+    font-size: $font-size-lg;
+    margin-bottom: $spacing-lg;
+  }
+
+  .cta {
+    background: $color-gold;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.2s;
+
+    &:hover {
+      background: color.adjust($color-gold, $lightness: -10%);
+    }
+  }
+}
+
+/* Arrows */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  padding: 0.4rem;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 3;
+  transition: background 0.2s;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  &.left {
+    left: 20px;
+  }
+
+  &.right {
+    right: 20px;
+  }
+}
+
+/* Dots */
+.dots {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  width: 100%;
+  z-index: 3;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+
+  &:hover {
+    background: $color-gold;
+    transform: scale(1.2);
+  }
+
+  &.active {
+    background: $color-gold;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    height: 70vh;
+
+    h1 {
+      font-size: 1.6rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    .overlay {
+      padding: $spacing-md;
+    }
+
+    .arrow {
+      padding: 0.2rem;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+    }
+  }
+}

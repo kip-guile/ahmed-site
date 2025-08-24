@@ -1,0 +1,48 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+
+.about {
+  background: url('/images/about-bg.jpg') center/cover no-repeat;
+  color: $color-white;
+  padding: $spacing-xl 0;
+  position: relative;
+  text-align: center;
+
+  .overlay {
+    background: rgba(0, 0, 0, 0.6);
+    max-width: 900px;
+    margin: 0 auto;
+    padding: $spacing-lg;
+    border-radius: 8px;
+  }
+
+  h2 {
+    color: $color-gold;
+    margin-bottom: $spacing-md;
+  }
+
+  p {
+    margin-bottom: $spacing-md;
+    font-size: 1.1rem;
+  }
+}
+
+.highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: $spacing-lg;
+  margin-top: $spacing-lg;
+
+  div {
+    text-align: center;
+
+    h3 {
+      margin: $spacing-sm 0;
+      color: $color-gold;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+}

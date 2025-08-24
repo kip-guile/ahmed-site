@@ -1,0 +1,79 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+
+.footer {
+  background: $color-dark;
+  color: $color-white;
+  padding: $spacing-xl $spacing-md;
+
+  .top {
+    @include container;
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-lg;
+    justify-content: space-between;
+    margin-bottom: $spacing-lg;
+
+    .col {
+      flex: 1;
+      min-width: 200px;
+
+      h4 {
+        color: $color-gold;
+        margin-bottom: $spacing-sm;
+      }
+
+      a {
+        display: block;
+        color: $color-white;
+        margin-bottom: 0.5rem;
+        font-size: 0.95rem;
+
+        &:hover {
+          color: $color-gold;
+        }
+      }
+
+      p {
+        font-size: 0.95rem;
+        margin-bottom: 0.25rem;
+      }
+    }
+
+    .logo {
+      height: auto;
+      width: 150px; // consistent with header but slightly smaller
+      margin-bottom: $spacing-sm;
+    }
+
+    .socials {
+      display: flex;
+      gap: $spacing-md;
+      margin-top: $spacing-md;
+
+      a {
+        color: $color-white;
+        transition: color 0.2s;
+
+        &:hover {
+          color: $color-gold;
+        }
+      }
+    }
+  }
+
+  .bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    padding-top: $spacing-md;
+    font-size: 0.85rem;
+  }
+
+  @media (max-width: 768px) {
+    .top {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
+  }
+}
