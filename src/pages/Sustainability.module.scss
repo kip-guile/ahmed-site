@@ -1,0 +1,33 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+
+.sustainability {
+  background: $color-light;
+  padding: $spacing-xl 0;
+  text-align: center;
+
+  h2 {
+    color: $color-gold;
+    margin-bottom: $spacing-md;
+  }
+
+  .intro {
+    max-width: 800px;
+    margin: 0 auto $spacing-lg;
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+
+  .grid {
+    @include container;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: $spacing-lg;
+  }
+
+  @media (max-width: 768px) {
+    .intro {
+      padding: 0 $spacing-md;
+    }
+  }
+}
