@@ -1,6 +1,6 @@
 import styles from './Projects.module.scss'
 import Card from '../components/Card'
-import { Pickaxe, Anchor, Zap } from 'lucide-react'
+import { Ship, Wrench, Search, Sun } from 'lucide-react'
 
 export default function Projects() {
   return (
@@ -8,22 +8,28 @@ export default function Projects() {
       <h2>Our Projects</h2>
       <div className={styles.grid}>
         <Card
-          image='/images/project-mining.jpg'
-          icon={<Pickaxe size={40} color='#c8a951' />}
-          title='Mining Project'
-          description='Active gold and diamond mining projects across Africa, supplying responsibly sourced minerals to global markets.'
+          image='/images/project-marine.jpg'
+          icon={<Ship size={40} color='#c8a951' />}
+          title='Marine & Offshore'
+          description='Wreck removal, vessel chartering, petroleum supply, dredging, and offshore logistics projects across Africa.'
         />
         <Card
-          image='/images/project-marine.jpg'
-          icon={<Anchor size={40} color='#c8a951' />}
-          title='Marine Project'
-          description='Shipwreck removal and salvage operations in Lagos waters, improving marine safety and logistics.'
+          image='/images/hero-engineering.jpg'
+          icon={<Wrench size={40} color='#c8a951' />}
+          title='Engineering & Fabrication'
+          description='Marine construction, welding, fabrication, and scaffold works delivered with precision and safety.'
+        />
+        <Card
+          image='/images/hero-inspection.jpg'
+          icon={<Search size={40} color='#c8a951' />}
+          title='Inspection & Testing'
+          description='Non-destructive testing, equipment calibration, and tank cleaning ensuring compliance and reliability.'
         />
         <Card
           image='/images/project-energy.jpg'
-          icon={<Zap size={40} color='#c8a951' />}
-          title='Energy Project'
-          description='Solar street lighting and rural electrification initiatives powering homes and industries across Africa.'
+          icon={<Sun size={40} color='#c8a951' />}
+          title='Energy & Underwater Solutions'
+          description='Underwater maintenance and renewable energy projects in solar, telecom, and electrification across Africa.'
         />
       </div>
     </section>

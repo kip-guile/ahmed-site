@@ -5,23 +5,32 @@ import styles from './Hero.module.scss'
 
 const slides = [
   {
-    src: '/images/hero-mining.jpg',
-    alt: 'Mining',
-    headline: 'Responsible Gold & Diamond Mining',
+    src: '/images/hero-marine.jpg',
+    alt: 'Marine & Offshore',
+    headline: 'Marine & Offshore Logistics',
     subtitle:
-      'Sustainably sourcing Africa’s mineral wealth for global markets.',
+      'From wreck removal to vessel chartering, we deliver trusted solutions across Africa’s coasts.',
   },
   {
-    src: '/images/hero-marine.jpg',
-    alt: 'Marine',
-    headline: 'Marine & Offshore Services',
-    subtitle: 'Shipwreck removal, offshore logistics, and vessel chartering.',
+    src: '/images/hero-engineering.jpg',
+    alt: 'Engineering',
+    headline: 'Engineering & Fabrication',
+    subtitle:
+      'Expertise in marine construction, welding, fabrication, and industrial maintenance.',
+  },
+  {
+    src: '/images/hero-inspection.jpg',
+    alt: 'Inspection & Testing',
+    headline: 'Inspection & Testing',
+    subtitle:
+      'Non-destructive testing, load calibration, and tank cleaning services for safe operations.',
   },
   {
     src: '/images/hero-energy.jpg',
     alt: 'Energy',
-    headline: 'Renewable Energy Solutions',
-    subtitle: 'Delivering solar projects and electrification across Africa.',
+    headline: 'Underwater & Energy Solutions',
+    subtitle:
+      'Specialized underwater repair alongside renewable solar, telecom, and electrification projects.',
   },
 ]
 

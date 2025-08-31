@@ -7,18 +7,19 @@ export default function About() {
       <div className={styles.overlay}>
         <h2>About Us</h2>
         <p>
-          ABODA Emperor Services Limited is a fully licensed and professionally
-          managed multinational company with expertise in mining, marine
-          logistics, energy, and infrastructure projects across Africa.
+          Aboda Emperor Services Limited is a fully licensed and professionally
+          managed multinational company delivering trusted solutions across
+          marine, offshore, engineering, inspection, and energy sectors in
+          Africa.
         </p>
         <div className={styles.highlights}>
           <div>
             <Eye size={30} color='#c8a951' />
             <h3>Our Vision</h3>
             <p>
-              To be one of Africa’s most respected and efficient gold, diamond,
-              marine, and energy companies through ethical, sustainable, and
-              profitable operations.
+              To be one of Africa’s most respected and efficient marine,
+              engineering, and energy service providers through ethical,
+              sustainable, and innovative operations.
             </p>
           </div>
         </div>
@@ -26,8 +27,9 @@ export default function About() {
           <Target size={30} color='#c8a951' />
           <h3>Our Mission</h3>
           <p>
-            To discover, develop, and deliver resources responsibly while
-            creating value for stakeholders, employees, and host communities.
+            To deliver world-class marine, engineering, inspection, and energy
+            solutions responsibly while creating value for stakeholders,
+            employees, and host communities.
           </p>
         </div>
         <div>
