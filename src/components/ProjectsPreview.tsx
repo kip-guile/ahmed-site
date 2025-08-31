@@ -1,6 +1,6 @@
 import styles from './ProjectsPreview.module.scss'
 import Card from './Card'
-import { Pickaxe, Anchor, Zap } from 'lucide-react'
+import { Ship, Wrench, Search, Sun } from 'lucide-react'
 
 export default function ProjectsPreview() {
   return (
@@ -8,19 +8,24 @@ export default function ProjectsPreview() {
       <h2>Our Projects</h2>
       <div className={styles.grid}>
         <Card
-          icon={<Pickaxe size={40} color='#c8a951' />}
-          title='Mining'
-          description='Responsible gold & diamond mining across mineral-rich African regions.'
+          icon={<Ship size={40} color='#c8a951' />}
+          title='Marine & Offshore'
+          description='Wreck removal, vessel chartering, petroleum supply, dredging, and offshore logistics.'
         />
         <Card
-          icon={<Anchor size={40} color='#c8a951' />}
-          title='Marine'
-          description='Shipwreck removal and logistics support for oil & gas operations.'
+          icon={<Wrench size={40} color='#c8a951' />}
+          title='Engineering & Fabrication'
+          description='Marine construction, welding, fabrication, sandblasting, painting, and scaffold works.'
         />
         <Card
-          icon={<Zap size={40} color='#c8a951' />}
-          title='Energy'
-          description='Renewable energy and electrification projects powering communities.'
+          icon={<Search size={40} color='#c8a951' />}
+          title='Inspection & Testing'
+          description='Non-destructive testing, load calibration, and tank cleaning for safe operations.'
+        />
+        <Card
+          icon={<Sun size={40} color='#c8a951' />}
+          title='Energy & Underwater Solutions'
+          description='Underwater maintenance and renewable energy projects in solar, telecom, and electrification.'
         />
       </div>
     </section>

@@ -44,11 +44,41 @@ export default function Contact() {
           </div>
           <div>
             <Phone size={20} color='#c8a951' />
-            <p>+234 806 955 5150</p>
+            <p>+234 806 955 5150 (Nigeria)</p>
+          </div>
+          <div>
+            <Phone size={20} color='#c8a951' />
+            <p>+231 770 424848 (Liberia)</p>
+          </div>
+          <div>
+            <Phone size={20} color='#c8a951' />
+            <p>+232 776 30181 (Sierra Leone)</p>
           </div>
           <div>
             <MapPin size={20} color='#c8a951' />
-            <p>Offices in Nigeria, Liberia, Sierra Leone</p>
+            <p>No. 1, Faith Street, Comfort Uboh, Apapa, Lagos, Nigeria</p>
+          </div>
+          <div>
+            <MapPin size={20} color='#c8a951' />
+            <p>
+              No. 6, Cairo Street House 10, Off Adetokunbo Ademola Crescent,
+              Wuse 2, Abuja FCT, Nigeria
+            </p>
+          </div>
+          <div>
+            <MapPin size={20} color='#c8a951' />
+            <p>
+              Robert Field Highway, Marshall Road, Around Boy’s Town, Margibi
+              County, Liberia
+            </p>
+          </div>
+          <div>
+            <MapPin size={20} color='#c8a951' />
+            <p>No. 91, Fort Street, Freetown, Sierra Leone</p>
+          </div>
+          <div>
+            <MapPin size={20} color='#c8a951' />
+            <p>999 Airport Ferry Road, Lungi, Sierra Leone</p>
           </div>
         </div>
 

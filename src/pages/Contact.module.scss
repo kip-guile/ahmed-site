@@ -22,20 +22,20 @@
   }
 
   .details {
-    display: flex;
-    justify-content: center;
-    gap: $spacing-lg;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: $spacing-md;
     margin-bottom: $spacing-xl;
-    flex-wrap: wrap;
 
     div {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       gap: $spacing-sm;
-      font-size: 1rem;
+      font-size: 0.95rem;
       background: rgba(255, 255, 255, 0.1);
       padding: $spacing-sm $spacing-md;
       border-radius: 6px;
+      text-align: left;
     }
   }
 

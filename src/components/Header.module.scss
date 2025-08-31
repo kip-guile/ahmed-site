@@ -88,10 +88,12 @@
       padding: $spacing-md;
       max-height: 0;
       overflow: hidden;
+      display: none;
       transition: max-height 0.3s ease-out;
 
       &.open {
         max-height: 400px;
+        display: flex;
       }
     }
 
