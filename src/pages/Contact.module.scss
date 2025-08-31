@@ -2,12 +2,27 @@
 @use 'sass:color';
 
 .contact {
-  background: url('/images/contact-bg.jpg') center/cover no-repeat;
+  position: relative;
+  overflow: hidden;
   padding: $spacing-xl $spacing-md;
   color: $color-white;
   text-align: center;
 
+  .bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+
+    .bgImage {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
   .overlay {
+    position: relative;
+    z-index: 1;
     background: rgba(0, 0, 0, 0.65);
     max-width: 700px;
     margin: 0 auto;

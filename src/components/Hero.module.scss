@@ -2,23 +2,51 @@
 @use 'sass:color';
 
 .hero {
+  position: relative;
   height: 90vh;
-  background-size: cover;
-  background-position: center;
-  color: white;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  position: relative;
-  transition: background-image 0.3s ease-in-out; // faster + subtle
+  color: white;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 1;
+  }
+
+  .image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    z-index: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    &.active {
+      opacity: 1;
+      z-index: 0;
+    }
+  }
 
   .overlay {
-    background: rgba(0, 0, 0, 0.5);
-    padding: $spacing-lg;
-    border-radius: 8px;
-    max-width: 800px;
+    position: relative;
     z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
   }
 
   h1 {
@@ -44,88 +72,60 @@
       background: color.adjust($color-gold, $lightness: -10%);
     }
   }
-}
 
-/* Arrows */
-.arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  border: none;
-  color: white;
-  padding: 0.4rem;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 3;
-  transition: background 0.2s;
+  /* Arrows */
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 0.4rem;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 3; // ensure above images and overlay
+    transition: background 0.2s;
 
-  &:hover {
-    background: rgba(0, 0, 0, 0.8);
-  }
-
-  &.left {
-    left: 20px;
-  }
-
-  &.right {
-    right: 20px;
-  }
-}
-
-/* Dots */
-.dots {
-  position: absolute;
-  bottom: 20px;
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  width: 100%;
-  z-index: 3;
-}
-
-.dot {
-  width: 12px;
-  height: 12px;
-  background: rgba(255, 255, 255, 0.6);
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.2s;
-
-  &:hover {
-    background: $color-gold;
-    transform: scale(1.2);
-  }
-
-  &.active {
-    background: $color-gold;
-  }
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .hero {
-    height: 70vh;
-
-    h1 {
-      font-size: 1.6rem;
+    &:hover {
+      background: rgba(0, 0, 0, 0.8);
     }
 
-    p {
-      font-size: 1rem;
+    &.left {
+      left: 20px;
     }
 
-    .overlay {
-      padding: $spacing-md;
+    &.right {
+      right: 20px;
+    }
+  }
+
+  /* Dots */
+  .dots {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+    z-index: 3; // ensure visible
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+
+    &:hover {
+      background: $color-gold;
+      transform: scale(1.2);
     }
 
-    .arrow {
-      padding: 0.2rem;
-    }
-
-    .dot {
-      width: 10px;
-      height: 10px;
+    &.active {
+      background: $color-gold;
     }
   }
 }
