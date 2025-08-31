@@ -2,6 +2,8 @@ import { useState } from 'react'
 import styles from './Contact.module.scss'
 import { Mail, Phone, MapPin } from 'lucide-react'
 
+import bgImg from '../assets/images/contact-bg.jpg?w=480;768;1200;1600&format=webp;avif&as=picture'
+
 export default function Contact() {
   const [status, setStatus] = useState<
     'idle' | 'loading' | 'success' | 'error'
@@ -35,6 +37,18 @@ export default function Contact() {
 
   return (
     <section className={styles.contact}>
+      <picture className={styles.bg}>
+        {Object.values(bgImg.sources || {}).map((src, i) => (
+          <source key={i} srcSet={src.srcset} type={src.type} sizes='100vw' />
+        ))}
+        <img
+          src={bgImg.img?.src}
+          alt=''
+          className={styles.bgImage}
+          loading='lazy'
+          decoding='async'
+        />
+      </picture>
       <div className={styles.overlay}>
         <h2>Contact Us</h2>
         <div className={styles.details}>

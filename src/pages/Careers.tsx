@@ -2,6 +2,10 @@ import styles from './Careers.module.scss'
 import Card from '../components/Card'
 import { HardHat, Wrench, Zap } from 'lucide-react'
 
+import carTeam from '../assets/images/careers-team.jpg?w=480;768;1200;1600&format=webp;avif&as=picture'
+import carMar from '../assets/images/careers-marine.jpg?w=480;768;1200;1600&format=webp;avif&as=picture'
+import carEne from '../assets/images/careers-energy.jpg?w=480;768;1200;1600&format=webp;avif&as=picture'
+
 export default function Careers() {
   return (
     <section className={styles.careers}>
@@ -12,19 +16,19 @@ export default function Careers() {
       </p>
       <div className={styles.grid}>
         <Card
-          image='/images/careers-team.jpg'
+          image={carTeam}
           icon={<HardHat size={30} color='#c8a951' />}
           title='Mining Engineer'
           description='Support exploration and mining operations with modern and sustainable practices.'
         />
         <Card
-          image='/images/careers-marine.jpg'
+          image={carMar}
           icon={<Wrench size={30} color='#c8a951' />}
           title='Marine Technician'
           description='Assist with underwater services, shipwreck removal, and marine logistics projects.'
         />
         <Card
-          image='/images/careers-energy.jpg'
+          image={carEne}
           icon={<Zap size={30} color='#c8a951' />}
           title='Solar Project Manager'
           description='Lead electrification and renewable energy initiatives across rural and urban Africa.'
